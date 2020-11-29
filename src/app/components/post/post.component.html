@@ -1,0 +1,7 @@
+<div >
+    <p class="post-content" 
+       (click)='toggle()'
+       [ngClass]='showPostId ? "red-orientation" : "black-orientation"'>
+        {{showPostId ? post.id : post.userId}}
+    </p>
+</div>
