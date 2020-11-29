@@ -19,18 +19,10 @@ export class PostListComponent implements OnInit {
 
   ngOnInit() {
     this.loadingSpinner.show();
-    this.postService.getPosts()
-      .then(response => response.json())
-      .then(data => {
-        this.posts = data;
-      })
-      .catch(err => {
-        console.log('err');
-        this.notifier.notify('error', 'Error while retrieving posts!');
-      })
-      .finally(() => {
-        this.loadingSpinner.hide();
-      })
+    this.postService.getPosts().subscribe(data => {
+      this.posts = data;
+      this.loadingSpinner.hide();
+    })
   }
 
 }

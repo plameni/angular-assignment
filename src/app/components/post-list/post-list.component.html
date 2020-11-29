@@ -1,7 +1,7 @@
-
-<div class="post-container">
-    <app-post *ngFor='let p of posts' 
+<div class="post-container row">
+    <app-post *ngFor='let p of posts; let i = index' 
               [post]='p'
-              class="post">
+              class="post col-lg-1 col-md-1 col-sm-6 col-xs-12"
+              [ngClass]='i % 10 == 0 ? "offset-md-1 offset-lg-1" : ""'>
     </app-post>
 </div>
