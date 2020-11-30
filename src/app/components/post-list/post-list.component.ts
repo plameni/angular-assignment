@@ -14,8 +14,7 @@ export class PostListComponent implements OnInit {
   posts: Post[];
   
   constructor(private postService: PostService, 
-              private loadingSpinner: Ng4LoadingSpinnerService, 
-              private notifier: NotifierService) { }
+              private loadingSpinner: Ng4LoadingSpinnerService) { }
 
   ngOnInit() {
     this.loadingSpinner.show();
