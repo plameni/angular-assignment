@@ -10,13 +10,17 @@ import { PostListComponent } from './components/post-list/post-list.component';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { NotifierModule } from "angular-notifier";
 import { MainContainerComponent } from './components/main-container/main-container.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostComponent,
     PostListComponent,
-    MainContainerComponent
+    MainContainerComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
